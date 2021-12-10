@@ -1,0 +1,66 @@
+body{
+    overflow: hidden;
+}
+.grid {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.controls {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.buttonW {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border: transparent;
+    background-color: gainsboro;
+    width: 50px;
+    height: 50px;
+}
+
+.buttonA,
+.buttonS,
+.buttonD {
+    border: transparent;
+    background-color: gainsboro;
+}
+
+.lil {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.wall {
+    background-color: rgba(128, 128, 128, 0.466);
+}
+
+.snake-body {
+    background-color: rgba(128, 128, 128, 0.466);
+}
+
+.snake-head {
+    background-color: rgb(128, 128, 128);
+}
+
+.apple {
+    background-color: red;
+}
+.score{
+    position: relative;
+    font-size: 3rem;
+    font-family: 'VT323';
+}
