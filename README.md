@@ -1,6 +1,11 @@
 # SnakeGame
-Jogo da cobrinha, só que mais simples.
+# Lançado dia 10 de Dezembro de 2021
 
 Versão 1.1
-  1.O jogo agora tem GameOver
-  2.Melhorias estéticas
+
+Dia 23 de Dezembro de 2021
+
+
+1. O jogo agora tem GameOver
+
+2. Melhorias estéticas
