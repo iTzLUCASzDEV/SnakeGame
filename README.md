@@ -1,5 +1,5 @@
 # SnakeGame
-# Lançado dia 10 de Dezembro de 2021
+# Lançado dia 19 de Outubro de 2021
 
 Versão 1.1
 
