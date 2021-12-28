@@ -1,3 +1,11 @@
+/*
+ _
+| | _   _   ___   __ _  ___
+| || | | | / __| / _` |/ __|
+| || |_| || (__ | (_| |\__ \
+|_| \__,_| \___| \__,_||___/
+*/
+
 const grid = document.querySelector('.grid')
 const score_display = document.querySelector('.score')
 const squares = []
