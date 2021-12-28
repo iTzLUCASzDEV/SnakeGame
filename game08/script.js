@@ -47,7 +47,7 @@ const lista_cobra = []
 
 function createBoard() {
     for (let i = 0; i < layout.length; i++) {
-        var square = document.createElement('div')        
+        var square = document.createElement('div')
         grid.appendChild(square)
         squares.push(square)
         if (layout[i] === 1) {
@@ -118,7 +118,7 @@ const snake = {
             lista_cobra_last.shift()
         }
     },
-    gameover(){
+    gameover() {
         value = ''
         document.querySelector('.gameover-message').innerHTML = 'VOCÊ PERDEU!!!'
         squares[apple.pos].classList.remove('apple')
@@ -135,15 +135,15 @@ const snake = {
         snakeHead = 340
         this.restart()
     },
-    restart(){
+    restart() {
         apple.macas_comidas = 0
         score_display.innerHTML = `PONTOS: ${apple.macas_comidas}`
         apple.pos = 355
-        createBoard()        
-        setTimeout(() => {            
+        createBoard()
+        setTimeout(() => {
             document.querySelector('.gameover-message').innerHTML = ''
             value = 'no'
-        }, 1000); 
+        }, 1000);
     }
 }
 
@@ -172,7 +172,9 @@ const apple = {
 
 function moveSnake(event) {
     console.log(event.code)
-    if(value == ''){return}
+    if (value == '') {
+        return
+    }
     squares[snakeHead].classList.remove('snake-head')
     switch (event.code) {
         case 'KeyW':
@@ -208,16 +210,15 @@ async function loop() {
 loop()
 */
 
-function gameLoop(){
-    setInterval(show, 1000/12)
+function gameLoop() {
+    setInterval(show, 500 / 8)
 }
 
-function show(){
+function show() {
     update();
 }
 
-
-function update(){
+function update() {
     snake.andar()
     snake.atualiza()
     snake.verifica_colisao()
