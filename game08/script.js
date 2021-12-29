@@ -211,7 +211,7 @@ loop()
 */
 
 function gameLoop() {
-    setInterval(show, 500 / 8)
+    setInterval(show, 1000 / 20)
 }
 
 function show() {
