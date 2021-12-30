@@ -2,6 +2,7 @@ body{
     overflow: hidden;
 }
 .grid {
+
     background-color: black;
     margin-left: auto;
     margin-right: auto;
@@ -11,7 +12,8 @@ body{
     height: 560px;
 }
 
-.grid div {
+.grid div {    
+    z-index: 0;
     width: 20px;
     height: 20px;
 }
@@ -81,4 +83,55 @@ body{
     color: red;
     font-size: 5rem;
     font-family: 'VT323';
+}
+.character{
+    font-family: 'VT323';
+    font-size: 1.8rem;
+    position: absolute;
+    border: transparent;
+    border-radius: 10%;
+}
+.character:hover{
+    cursor: pointer;
+    background-color: lightgrey; 
+}
+.keys{
+    margin-top: -25rem;
+    margin-left: 2.7rem;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+.w, .a, .s, .d{
+    background-color: black;
+    color: white;
+    font-family: 'VT323';
+    font-size: 3rem;
+    padding-top: 25px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+    width: 60px;
+    height: 74px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20%;
+}
+.w:hover, .a:hover, .s:hover, .d:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+.w{
+    padding-left: 40px;
+    width: 60px;
+    height: 74px;
+    margin-bottom: -3rem;
+}
+.a, .s, .d{
+    padding-left: 38px;
+}
+.skeys{
+    display: flex;
 }
