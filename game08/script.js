@@ -8,6 +8,12 @@
 
 const grid = document.querySelector('.grid')
 const score_display = document.querySelector('.score')
+const characterdiv = document.querySelector('.characterdiv')
+const characterdisplay = document.querySelector('.character')
+const w = document.querySelector('.w')
+const a = document.querySelector('.a')
+const s = document.querySelector('.s')
+const d = document.querySelector('.d')
 const squares = []
 const width = 28
 const layout = [
@@ -136,6 +142,7 @@ const snake = {
         this.restart()
     },
     restart() {
+        changekeyscolor('nothing')
         apple.macas_comidas = 0
         score_display.innerHTML = `PONTOS: ${apple.macas_comidas}`
         apple.pos = 355
@@ -170,6 +177,24 @@ const apple = {
     }
 }
 
+listkeys = [w, a, s, d]
+function changekeyscolor(x){
+    try {
+        x.style.backgroundColor = 'white'
+        x.style.color = 'black'
+        x.style.border = '3px solid rgb(0, 0, 0)'
+    } catch (error) {
+        console.log('')
+    }
+    listkeys.forEach(element => {
+        if(element!=x){
+            element.style.backgroundColor = 'black'
+            element.style.color = 'white'
+            element.style.border = '3px solid rgb(255, 255, 255)'
+        }
+    });
+}
+
 function moveSnake(event) {
     console.log(event.code)
     if (value == '') {
@@ -179,24 +204,68 @@ function moveSnake(event) {
     switch (event.code) {
         case 'KeyW':
         case 'ArrowUp':
+            changekeyscolor(w)
             value = 'up'
             break
         case 'KeyS':
         case 'ArrowDown':
+            changekeyscolor(s)
             value = 'down'
             break
         case 'KeyD':
         case 'ArrowRight':
+            changekeyscolor(d)
             value = 'right'
             break
         case 'KeyA':
         case 'ArrowLeft':
+            changekeyscolor(a)
             value = 'left'
             break
     }
     squares[snakeHead].classList.add('snake-head')
 }
 document.addEventListener('keyup', moveSnake)
+
+
+/*
+const character = ['Snake', 'RoundSnake', 'SquareSnake', 'DickSnake']
+const charactercaracteristics = {
+    'Snake': 
+    {
+        'colorhead': 'white', 
+        'colorbody': 'white',
+        'round': '15%'
+    },
+    'RoundSnake': 
+    {
+        'colorhead': 'blue',
+        'colorbody': 'blue',
+        'round': '50%'
+    }
+};
+characterActualPos = 1
+characterActual = character[characterActualPos]
+function changeCharacter(){
+    characterActualPos++    
+    if(characterActualPos>3){        
+        characterActualPos = 0    
+    }
+    characterdisplay.value = 'Character - '+character[characterActualPos]    
+    applyStyle(
+        charactercaracteristics[character[characterActualPos]]['colorhead'], 
+        charactercaracteristics[character[characterActualPos]]['colorbody'], 
+        charactercaracteristics[character[characterActualPos]]['round']
+               )
+}
+
+function applyStyle(colorhead, colorbody, round){
+    document.querySelector('.snake-head').style.backgroundColor = colorhead
+    document.querySelector('.snake-body').style.backgroundColor = colorbody
+    document.querySelector('.snake-head').style.borderRadius = round
+    document.querySelector('.snake-body').style.borderRadius = round
+}
+*/
 /*
 FIXME: OLD:
 async function loop() {
